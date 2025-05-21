@@ -20,10 +20,20 @@ public class Main {
                 "Satoshi sent 100 BC to Starbucks"
         };
         Block secondBlock = new Block(genesisBlock.getBlockHash(), secondTrans);
+
+        String[] thirdTrans = {
+            "Bob sent Sathoshi 100 BC",
+            "Satoshi sent 10 BC to Apple"
+        };
+        Block thirdsBlock = new Block(secondBlock.getBlockHash(), thirdTrans);
         System.out.println("Hash of genesis block: ");
         System.out.println(genesisBlock.getBlockHash());
+
         System.out.println("Hash of block 2: ");
         System.out.println(secondBlock.getBlockHash());
+
+        System.out.println("Hash of block 3: ");
+        System.out.println(thirdsBlock.getBlockHash());
     }
 }
 
